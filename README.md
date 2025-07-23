@@ -1,4 +1,9 @@
 # 🚀 Docker Nginx Auto Deployment with GitHub Actions
+[![CI/CD](https://github.com/aleixnguyen-vn/docker-nginx-github/actions/workflows/deploy.yml/badge.svg)](https://github.com/aleixnguyen-vn/docker-nginx-github/actions)
+![Docker](https://img.shields.io/badge/docker-ready-blue?logo=docker)
+![Terraform](https://img.shields.io/badge/terraform-vultr-blueviolet?logo=terraform)
+![Nginx](https://img.shields.io/badge/nginx-configured-green?logo=nginx)
+![GitHub](https://img.shields.io/badge/github-actions-blue?logo=github)
 
 This repo demonstrates a simple yet powerful setup to automatically deploy a **Nginx + PHP-FPM** web app using **Docker**, **GitHub Actions**/**GitLab CI/CD**, and **IaC** via **Terraform on Vultr**.
 
