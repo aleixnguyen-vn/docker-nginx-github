@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  php-fpm:
+    container_name: php82
+    image: php:8.2-fpm
+    volumes:
+      - ./src:/var/www/${DOMAIN}
+    environment:
+      - DOMAIN=${DOMAIN}
+    networks:
+      - net1
+
+  nginx:
+    container_name: nginx
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf.template:/etc/nginx/templates/default.conf.template
+      - ./src:/var/www/${DOMAIN}
+    environment:
+      - DOMAIN=${DOMAIN}
+    networks:
+      - net1
+
+networks:
+  net1:
