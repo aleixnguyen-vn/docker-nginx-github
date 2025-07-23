@@ -28,7 +28,7 @@ jobs:
           APP_DIR: ${{ secrets.APP_DIR }}
         run: |
           ssh $VPS_USER@$VPS_IP <<EOF
-            cd $APP_DIR
+            cd ${{ secrets.APP_DIR }}
             git pull
             docker compose down || true
             docker compose --env-file .env up -d --build
